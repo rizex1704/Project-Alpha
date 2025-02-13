@@ -118,7 +118,7 @@ int main() {
             generate_key_iv(key, iv);
             encrypt_password(password, key, iv, ciphertext, &ciphertext_len);
             save_encrypted_password(ciphertext, ciphertext_len, key, iv);
-            printf("비밀번호가 저장되었습니다!\n");
+            printf("비밀번호가 저장되었습니다\n");
         } else if (choice == 2) {
             if (load_encrypted_password(ciphertext, &ciphertext_len, key, iv)) {
                 decrypt_password(ciphertext, ciphertext_len, key, iv, decrypted_password);
@@ -126,13 +126,13 @@ int main() {
                     printf("저장된 비밀번호: %s\n", decrypted_password);
                 }
             } else {
-                printf("저장된 비밀번호가 없습니다.\n");
+                printf("저장된 비밀번호가 없습니다\n");
             }
         } else if (choice == 3) {
-            printf("프로그램을 종료합니다.\n");
+            printf("프로그램을 종료합니다\n");
             break;
         } else {
-            printf("올바른 옵션을 선택하세요!\n");
+            printf("올바른 옵션을 선택하세요\n");
         }
     }
     return 0;
